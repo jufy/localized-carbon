@@ -18,7 +18,10 @@ class LocalizedCarbonServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('laravelrus/localized-carbon');
+		//Laravel4 support
+		//$this->package('laravelrus/localized-carbon');
+		//Laravel5 support
+		$this->loadTranslationsFrom(__DIR__ . '/../../lang', 'localized-carbon');
 	}
 
 	/**
